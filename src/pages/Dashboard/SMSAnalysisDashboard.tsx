@@ -1,4 +1,4 @@
-import React, { FormEvent, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import DefaultLayout from '../../layout/DefaultLayout';
 import SMSAnalysisTable from '../../components/Tables/TableAnalysis';
 import useFetch from '../../util/useFetch';

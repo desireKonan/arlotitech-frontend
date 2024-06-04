@@ -15,6 +15,7 @@ import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
 import Buttons from './pages/UiElements/Buttons';
 import SMSAnalysisDashboard from './pages/Dashboard/SMSAnalysisDashboard';
+import User from './pages/User';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -37,8 +38,17 @@ function App() {
           index
           element={
             <>
-              <PageTitle title="eCommerce Dashboard | SMS Analysis Plateform" />
+              <PageTitle title="Dashboard | SMS Analysis Plateform" />
               <SMSAnalysisDashboard />
+            </>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <>
+              <PageTitle title="User | SMS Analysis Plateform" />
+              <User />
             </>
           }
         />
