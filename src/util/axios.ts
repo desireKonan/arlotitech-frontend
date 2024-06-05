@@ -12,7 +12,14 @@ const axiosServices = axios.create({
 
 // interceptor for http
 axiosServices.interceptors.response.use(
-    (response) => response,
+    (response) => {
+        const token = localStorage.getItem('token');
+        if(token) {
+            response.headers["Authorization"] = "Bearer " + token;
+            console.log(token);
+        }
+        return response;
+    },
     (error) => Promise.reject((error.response && error.response.data) || 'Wrong Services')
 );
 
