@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }: Props) => {
           navigate("/");
         }
       })
-      .catch((e) => toast.warning("Server error occured"));
+      .catch(() => toast.warning("Server error occured"));
   };
 
   const isLoggedIn = () => {

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { UserAuthed } from "../models/UserAuthed";
 import { handleError } from "../util/handleError";
 import axiosServices from "../util/axios";
